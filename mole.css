@@ -1,8 +1,11 @@
 /* Your code here */
-
+.pf{
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(4,1fr);
+}
 .wgs{
     display: inline-block;
-    height: 500px;
+    height: 480px;
     width: 650px;
     position: relative;
     overflow: hidden;
@@ -16,6 +19,7 @@
     width: 376px;
     position: absolute;
     left: 109px;
+    transition: margin-top 0.2s;
 }
 .wgs__dirt-pile{
     height: 220px;
@@ -27,10 +31,20 @@
 .wgs__mole-head--hidden{
   margin-top: 485px;
 }
+body{
+  zoom: 0.75;
+}
+.wgs__mole-head--whacked{
+  border: 20px solid #f00;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  animation: expand 0.5s ease-in-out forwards;
+}
 
 
 /* UNCOMMENT THE CODE BELOW WHEN DIRECTED */
-/* .sb {
+.sb {
   background-color: cornflowerblue;
   border-bottom: 1px solid #645DED;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -39,17 +53,16 @@
   font-size: 30px;
   margin-bottom: 50px;
   padding: 10px 20px;
-} */
+} 
 
-/* .sb__mole-counter {
+.sb__mole-counter {
   flex: 1 0 0;
   text-align: right;
-} */
-
-/* .sb__score-holder {
+} 
+ .sb__score-holder {
   flex: 1 0 0;
-} */
+} 
 
-/* .sb__game-over--hidden {
+ .sb__game-over--hidden {
   display: none;
-} */
+} 
